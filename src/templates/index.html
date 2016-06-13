@@ -1,3 +1,8 @@
+<style>
+.direction {
+    cursor: pointer;
+}
+</style>
 <script src="{{ url_for('static', filename='js/jquery-1.11.3.js') }}"></script>
 <script>
     $(function() {
@@ -18,8 +23,20 @@
     });
 
 </script>
-
-<div data-action="up" class="direction">Up</div>
-<div data-action="down" class="direction">Down</div>
-<div data-action="left" class="direction">Left</div>
-<div data-action="right" class="direction">Right</div>
+<table style="width:150px;border:none;">
+  <tr>
+    <td></td>
+    <td><img src="{{ url_for('static', filename='img/arror-up.png') }}" data-action="up" class="direction" /></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img src="{{ url_for('static', filename='img/arror-left.png') }}" data-action="left" class="direction" /></td>
+    <td></td>
+    <td><img src="{{ url_for('static', filename='img/arror-right.png') }}" data-action="right" class="direction" /></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><img src="{{ url_for('static', filename='img/arror-down.png') }}" data-action="down" class="direction" /></td>
+    <td></td>
+  </tr>
+</table>
