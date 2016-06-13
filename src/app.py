@@ -40,4 +40,4 @@ def move(direction):
 
 # Start app if running from command line like: python flask_arm.py
 if __name__ == '__main__':
-    app.run(port=8000, debug=True)
+    app.run(host='', port=8000, debug=True)
