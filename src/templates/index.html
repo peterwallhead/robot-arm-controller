@@ -1,0 +1,25 @@
+<script src="{{ url_for('static', filename='js/jquery-1.11.3.js') }}"></script>
+<script>
+    $(function() {
+        $('.direction').click(function(){
+            var action_direction = $(this).data('action');
+
+            console.log(action_direction);
+
+            if(action_direction) {
+                $.get("/move/"+action_direction, function() {
+                    console.log("Arm moved");
+                })
+                .fail(function() {
+                    console.log("Arm failed to move");
+                });
+            }
+        });
+    });
+
+</script>
+
+<div data-action="up" class="direction">Up</div>
+<div data-action="down" class="direction">Down</div>
+<div data-action="left" class="direction">Left</div>
+<div data-action="right" class="direction">Right</div>
