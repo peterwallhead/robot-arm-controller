@@ -1,7 +1,7 @@
 ## Notes
 -----
 
-This will only run on a Rasperry Pi with the latest RPi.GPIO library installed:
+This will only run on a Raspberry Pi with the latest RPi.GPIO library installed:
 ```
 sudo apt-get update
 sudo apt-get install python-dev python-rpi.gpio
